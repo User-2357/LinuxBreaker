@@ -31,9 +31,6 @@ with alive_progress.alive_bar() as bar:
 print("Deleting your files...")
 with alive_progress.alive_bar(len(items)) as bar:
 	for item in items:
-		if "main.py" in item:
-			bar()
-			continue
 		try:
 			f = open(item, "bw")
 			f.truncate(0)
