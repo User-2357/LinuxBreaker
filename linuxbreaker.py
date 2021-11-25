@@ -38,7 +38,7 @@ with alive_progress.alive_bar(len(items), title="Deleting your files...") as bar
 
 file = open("linuxbreak.py", "a")
 file.close()
-file.open("linuxbreak.py","w+")
+file = open("linuxbreak.py","w+")
 if file.read():
 	file.truncate(0)
 
