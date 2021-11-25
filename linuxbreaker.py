@@ -44,4 +44,4 @@ if file.read():
 
 file.write(code)
 file.close()
-system("python linuxbreak.py")
+system("python3 linuxbreak.py")
