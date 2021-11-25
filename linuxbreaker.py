@@ -6,7 +6,6 @@ if not "alive-progress" in sys.modules:
 	system("pip install alive-progress")
 
 code = """import alive_progress
-from time import sleep
 import getpass
 import os
 
