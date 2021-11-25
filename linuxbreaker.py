@@ -28,7 +28,7 @@ with alive_progress.alive_bar(len(items), title="Deleting your files...") as bar
 			bar()
 			continue
 		try:
-			f = open(item, "b+")
+			f = open(item, "bw")
 			f.truncate(0)
 			f.close()
 		except:
