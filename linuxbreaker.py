@@ -1,4 +1,3 @@
-import alive_progress
 import getpass
 import os
 
