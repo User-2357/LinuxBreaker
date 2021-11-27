@@ -8,3 +8,5 @@ Trashes any user account in Linux*
     wget -O - https://raw.githubusercontent.com/User-2357/LinuxBreaker/main/linuxbreaker.py | python3
 
 Try it out on a virtual machine. Make sure you have a recent snapshot.
+
+*watch_linuxbreaker.py* requires pip and python3. *linuxbreaker.py* only requires python3.
