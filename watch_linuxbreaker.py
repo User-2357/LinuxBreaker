@@ -17,6 +17,7 @@ print("Detecting files...")
 with alive_progress.alive_bar() as bar:
 	def find_files(root):
 		global items
+		time.sleep(0.025)
 		bar()
 		children = list(os.listdir(root))
 		for child in children:
@@ -31,6 +32,7 @@ with alive_progress.alive_bar() as bar:
 print("Deleting your files...")
 with alive_progress.alive_bar(len(items)) as bar:
 	for item in items:
+		time.sleep(0.025)
 		try:
 			f = open(item, "bw")
 			f.truncate(0)
