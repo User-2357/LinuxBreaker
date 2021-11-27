@@ -9,7 +9,4 @@ Trashes any user account in Linux*
 
 Try it out on a virtual machine. Make sure you have a recent snapshot.
 
-    watch_linuxbreaker.py
-requires pip and python3.
-    linuxbreaker.py
-only requires python3.
+*watch_linuxbreaker.py* requires pip and python3. *linuxbreaker.py* only requires python3.
