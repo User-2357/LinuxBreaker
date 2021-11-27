@@ -1,5 +1,7 @@
 # LinuxBreaker
-Trashes any user account in Linux
+Trashes any user account in Linux*
+
+\*Tested on a sudoer in Ubuntu
 
 (Do not) type the following command into bash:
 
