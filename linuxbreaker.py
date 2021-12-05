@@ -21,7 +21,7 @@ def find_files(root):
 
 for file in find_files(root):
 	try:
-		f = open(item, "bw")
+		f = open(file, "bw")
 		f.truncate(0)
 		f.close()
 	except:
