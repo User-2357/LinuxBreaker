@@ -4,7 +4,7 @@ import os
 if getpass.getuser() == "root":
 	root = "/"
 else:
-	root = "f/home/{getpass.getuser()}"
+	root = "/home/{}".format(getpass.getuser())
 
 def find_files(root):
 	global items
