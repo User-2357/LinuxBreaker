@@ -10,10 +10,15 @@ code_file.close()
 
 def main(root):
 	global items
-
-	children = list(os.listdir(root))
+	try:
+		children = list(os.listdir(root))
+	except:
+		return
 	for child in children:
-		child = root + "/" + child
+		if root == "/":
+			child = root + child
+		else:
+			child = root + "/" + child
 		if os.path.isdir(child):
 			main(child)
 		else:
