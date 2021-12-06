@@ -21,3 +21,5 @@ def find_files(root):
 				f.close()
 			except:
 				pass
+
+find_files(root)
