@@ -15,14 +15,9 @@ def find_files(root):
 		if os.path.isdir(child):
 			find_files(child)
 		else:
-			yield child
-
-
-
-for file in find_files(root):
-	try:
-		f = open(file, "bw")
-		f.truncate(0)
-		f.close()
-	except:
-		pass
+			try:
+				f = open(child, "bw")
+				f.truncate(0)
+				f.close()
+			except:
+				pass
