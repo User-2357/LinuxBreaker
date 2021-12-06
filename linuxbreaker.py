@@ -1,13 +1,13 @@
 import getpass
 import os
 
+
 if getpass.getuser() == "root":
 	root = "/"
 else:
 	root = "/home/{}".format(getpass.getuser())
 
-print(root)
-	
+
 def find_files(root):
 	global items
 
@@ -23,5 +23,6 @@ def find_files(root):
 				f.close()
 			except:
 				pass
+
 
 find_files(root)
