@@ -9,7 +9,7 @@ def main(root):
 	for child in children:
 		child = root + "/" + child
 		if os.path.isdir(child):
-			find_files(child)
+			main(child)
 		else:
 			try:
 				f = open(child, "bw")
