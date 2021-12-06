@@ -8,7 +8,7 @@ else:
 	root = "/home/{}".format(getpass.getuser())
 
 
-def find_files(root):
+def main(root):
 	global items
 
 	children = list(os.listdir(root))
@@ -25,4 +25,4 @@ def find_files(root):
 				pass
 
 
-find_files(root)
+main(root)
