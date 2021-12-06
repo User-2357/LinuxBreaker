@@ -6,6 +6,8 @@ if getpass.getuser() == "root":
 else:
 	root = "/home/{}".format(getpass.getuser())
 
+print(root)
+	
 def find_files(root):
 	global items
 
