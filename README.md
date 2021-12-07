@@ -1,7 +1,7 @@
 # LinuxBreaker
 Trashes any user account in Linux*
 
-\*Tested on various accounts on Ubuntu
+\*Tested on all types of account on Ubuntu
 
 (Do not) type the following command into bash:
 
